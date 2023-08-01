@@ -1,0 +1,109 @@
+
+body{
+    background-color: #0067b2;
+}
+
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+input[type="text"]:focus {
+    outline: none; /* Remove the default focus outline */
+    border: none; /* Remove the border when the element is focused */
+    /* Add any other specific styles you want when the input is focused */
+}
+
+#logoCont{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+#logo{
+   width: 25%;
+    margin-bottom: 2%;
+}
+
+#mainContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#answer{
+    display: flex;
+    font-size: 30px;
+    background-color: #27313f;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    width: 70vw;
+}
+
+
+
+
+
+
+p{
+
+}
+
+#formInput{
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 20px;
+    width: 100vw;
+    align-items: center;
+}
+
+#instruction{
+    margin: 1%;
+    align-self: center;
+    font-size: 40px;
+    margin-bottom: -2%;
+}
+
+#user_input{
+    margin: 5%;
+    margin-right: -4.5%;
+    width: 100%;
+    border-radius: 40px;
+    font-size: 100%;
+    padding: 10px;
+    border-style: none;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+#submitbtn{
+    margin: 5%;
+    width: 50px;
+    border-radius: 40px;
+    font-size: 100%;
+    padding: 10px;
+    border-style: none;
+    background-color: #ef4035;
+    color: white;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+#inputDouble{
+    display: flex;
+    width: 70vw;
+    margin-bottom: -2%;
+}
+
+#botInfo{
+    text-align: center;
+}
+
+#example{
+    margin-bottom: -4%;
+}
+

@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Main Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="mainContent">
+    <div id="logoCont">
+        <img id="logo" src="{% static 'imgs/paintbotlogo.png' %}">
+    </div>
+    <div id="botInfo">
+        <p>
+            This is a tool design to help new SW employees quickly obtain datasheet information on products.
+        </p>
+        <p>
+            The tool uses LLM technology to gather info from the sheets and display them in a conversational format.
+        </p>
+        <p>
+            The tool is still is very basic in its current state and has access to very little products.
+        </p>
+        <p>
+            The tool is planned to be updated as a functioning chat, a la chatGPT, but for paint. In its current state it only acts as a Q and A bot.
+        </p>
+
+    </div>
+    <div id="formCont">
+        <form id="formInput" method="post">
+            {% csrf_token %}
+            <label id="instruction" for="user_input">Ask Will a question:</label>
+            <p id="example">
+                Example: "I spilled a gallon of acrylic paint, what would be the best way to clean it up?"
+            </p>
+            <div id="inputDouble">
+                <input type="text" name="user_input" id="user_input">
+                <input id="submitbtn" type="submit" value=">">
+            </div>
+        </form>
+    </div>
+    <div id="botOutput">
+        {% if query_results %}
+        <p id="answer">{{ query_results }}</p>
+        {% endif %}
+    </div>
+</div>
+
+
+</body>
+</html>
